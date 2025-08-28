@@ -21,8 +21,8 @@ The goal is to internalize Django fundamentals and gradually build production-re
     - Creating models
     - Model fields
     - Migrations (makemigrations, migrate)
-  - Next steps:
     - Django admin customization
+  - Next steps:
     - QuerySets (filter, exclude, get, all)
     - Relationships (OneToOne, ForeignKey, ManyToMany)
     - Model methods & Meta options

@@ -8,3 +8,6 @@ class Book(models.Model):
     published_date = models.DateField()
     pages = models.IntegerField(default=100)
     is_published = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f"{self.title} by {self.author}"
