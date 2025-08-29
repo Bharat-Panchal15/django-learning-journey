@@ -15,21 +15,25 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Templates & static files
   - Template inheritance, filters, and tags
 
-- 🔄 **Phase 2: Models & Database** (In Progress)
-  - Completed so far:
-    - Django ORM basics
-    - Creating models
-    - Model fields
-    - Migrations (makemigrations, migrate)
-    - Django admin customization
-  - Next steps:
-    - QuerySets (filter, exclude, get, all)
-    - Relationships (OneToOne, ForeignKey, ManyToMany)
-    - Model methods & Meta options
-  - Deliverable: Full persistence layer with models, queries, and admin integration
+- ✅ **Phase 2: Models & Database**
+  - Django ORM basics
+  - Creating models
+  - Model fields
+  - Migrations (makemigrations, migrate)
+  - Django admin customization
+  - QuerySets (filter, exclude, get, all)
+  - Relationships (OneToOne, ForeignKey, ManyToMany)
+  - Model methods & Meta options
 
-- ⏳ **Upcoming Phases**
-  - Phase 3: Forms and User Input
+- 🔜 **Phase 3: Forms and User Input** (Upcoming)
+  - Django forms
+  - ModelForm
+  - Form validation
+  - Handling GET and POST requests
+  - Messages framework (flash messages)
+  - File uploads
+
+- ⏳ **Later Phases**
   - Phase 4: Authentication and Authorization
   - Phase 5: Advanced Django
   - Phase 6: REST APIs with Django REST Framework
@@ -43,15 +47,16 @@ The goal is to internalize Django fundamentals and gradually build production-re
 django-learning-journey/
 │
 ├── phase-1_basics/         # Completed
-├── phase-2_models/         # In progress
+├── phase-2_models/         # Completed
 ├── roadmap.md              # Detailed learning roadmap
 └── README.md               # This file
 ```
 
 ---
 
-## 🎯 Goal
-Build a solid Django foundation by completing each phase and documenting the journey.  
+🎯 Goal
+
+Build a solid Django foundation by completing each phase and documenting the journey.
 At the end, the plan is to create real-world projects that cover CRUD, authentication, APIs, and deployment.
 
 ---
