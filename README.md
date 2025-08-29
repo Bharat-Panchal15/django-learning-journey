@@ -46,10 +46,10 @@ The goal is to internalize Django fundamentals and gradually build production-re
 ```text
 django-learning-journey/
 │
-├── phase-1_basics/         # Completed
-├── phase-2_models/         # Completed
-├── roadmap.md              # Detailed learning roadmap
-└── README.md               # This file
+├── phase-1_basics/                         # Completed
+├── phase-2_models/                         # Completed
+├── Django_Learning_Roadmap.pdf             # Detailed learning roadmap
+└── README.md                               # This file
 ```
 
 ---
