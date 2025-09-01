@@ -25,11 +25,13 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Relationships (OneToOne, ForeignKey, ManyToMany)
   - Model methods & Meta options
 
-- 🔜 **Phase 3: Forms and User Input** (Upcoming)
+- ✅ **Phase 3: Forms and User Input**
   - Django forms
   - ModelForm
   - Form validation
   - Handling GET and POST requests
+
+- 🔜 **Phase 3: Forms and User Input** (Upcoming)
   - Messages framework (flash messages)
   - File uploads
 
