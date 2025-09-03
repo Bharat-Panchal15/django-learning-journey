@@ -30,13 +30,18 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - ModelForm
   - Form validation
   - Handling GET and POST requests
-
-- 🔜 **Phase 3: Forms and User Input** (Upcoming)
   - Messages framework (flash messages)
   - File uploads
 
+- 🔜 **Phase 4: Authentication and Authorization** (Upcoming)
+  - Django's built-in User model
+  - Login, logout, signup
+  - password hashing
+  - Django authentication backends
+  - Permissions and groups
+  - Custom user models
+
 - ⏳ **Later Phases**
-  - Phase 4: Authentication and Authorization
   - Phase 5: Advanced Django
   - Phase 6: REST APIs with Django REST Framework
   - Phase 7: Deployment and Production
@@ -48,8 +53,9 @@ The goal is to internalize Django fundamentals and gradually build production-re
 ```text
 django-learning-journey/
 │
-├── phase-1_basics/                         # Completed
-├── phase-2_models/                         # Completed
+├── django_basics/                          # Completed
+├── django_models/                          # Completed
+├── django_forms/                           # Completed
 ├── Django_Learning_Roadmap.pdf             # Detailed learning roadmap
 └── README.md                               # This file
 ```

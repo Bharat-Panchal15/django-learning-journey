@@ -1,10 +1,11 @@
 from django import forms
+from django.core.validators import MinLengthValidator, RegexValidator
 from .models import Post
 
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title','content','author']
+        fields = ['title','content','author','image']
     
     def clean_title(self):
         title = self.cleaned_data.get("title")
@@ -26,6 +27,8 @@ class PostForm(forms.ModelForm):
             self.add_error("content","Content must be atleast of 20 characters long.")
 
 class ContactForm(forms.Form):
-    name = forms.CharField(max_length=50)
+    name = forms.CharField(max_length=50, validators=[MinLengthValidator(3)])
     email = forms.EmailField()
+    phone = forms.CharField(validators=[RegexValidator(r'^\d{10}$','Enter a valid 10-digit phone number')])
     message = forms.CharField(widget=forms.Textarea)
+    password = forms.CharField(widget=forms.PasswordInput)

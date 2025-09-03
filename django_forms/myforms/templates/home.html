@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Posts</title>
 </head>
 <body>
     <nav>
@@ -17,8 +17,12 @@
         <h2>{{ post.title }}</h2>
         <p>{{ post.content }}</p>
         <h3>- By {{ post.author }}</h3>
+        {% if post.image %}
+            <img src="{{ post.image.url }}" alt="Post Image" width="200">
+        {% endif %}
     {% empty %}
         <h2>No posts available</h2>
     {% endfor %}
+
 </body>
 </html>
