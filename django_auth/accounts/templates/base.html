@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/signup/">Sign Up</a></li>
+                <li><a href="/login/">Log In</a></li>
+                <li><a href="/logout/">Log Out</a></li>
+                <li><a href="/login_new/">Log In with Built In form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+            <h1>
+                Hello, Bharat the python full-stack Web developer, welcome to your website.
+            </h1>
+        {% endblock %}
+
+        {% if request.user.is_authenticated %}
+            <form action="/logout_new/" method="post">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% endif %}
+    </main>
+</body>
+</html>

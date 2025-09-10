@@ -33,10 +33,12 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Messages framework (flash messages)
   - File uploads
 
-- 🔜 **Phase 4: Authentication and Authorization** (Upcoming)
+- ✅ **Phase 4: Authentication and Authorization**
   - Django's built-in User model
   - Login, logout, signup
   - password hashing
+
+- 🔜 **Phase 4: Authentication and Authorization** (Upcoming)
   - Django authentication backends
   - Permissions and groups
   - Custom user models
