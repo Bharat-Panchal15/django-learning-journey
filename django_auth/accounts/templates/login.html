@@ -9,7 +9,7 @@
     {% endif %}
     <form method="post">
         {% csrf_token %}
-        <p><input type="text" name="username" placeholder="Username"></p>
+        <p><input type="email" name="email" placeholder="Email"></p>
         <p><input type="password" name="password" placeholder="Password"></p>
         <button type="submit">Login</button>
     </form>

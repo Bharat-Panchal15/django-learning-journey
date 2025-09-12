@@ -37,9 +37,9 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Django's built-in User model
   - Login, logout, signup
   - password hashing
+  - Django authentication backends
 
 - 🔜 **Phase 4: Authentication and Authorization** (Upcoming)
-  - Django authentication backends
   - Permissions and groups
   - Custom user models
 
