@@ -1,6 +1,8 @@
 from django.contrib.auth.backends import BaseBackend
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.db.models import Q
+
+User = get_user_model()
 
 class IdentityBackend(BaseBackend):
     def authenticate(self, request, identity=None, password=None, **kwargs):

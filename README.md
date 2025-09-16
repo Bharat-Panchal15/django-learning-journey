@@ -38,13 +38,19 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Login, logout, signup
   - password hashing
   - Django authentication backends
-
-- 🔜 **Phase 4: Authentication and Authorization** (Upcoming)
   - Permissions and groups
   - Custom user models
 
+- 🔜 **Phase 5: Advanced Django** (Upcoming)
+  - Class-based Views (ListView, DetailView, CreateView, UpdateView, DeleteView)
+  - Mixins
+  - Pagination
+  - Signals
+  - Middleware
+  - Context processors
+  - Custom template tags and filters
+
 - ⏳ **Later Phases**
-  - Phase 5: Advanced Django
   - Phase 6: REST APIs with Django REST Framework
   - Phase 7: Deployment and Production
   - Phase 8: Extras for Real-World Projects
@@ -58,7 +64,7 @@ django-learning-journey/
 ├── django_basics/                          # Completed
 ├── django_models/                          # Completed
 ├── django_forms/                           # Completed
-├── django_auth/                            # In Progress
+├── django_auth/                            # Completed
 ├── Django_Learning_Roadmap.pdf             # Detailed learning roadmap
 └── README.md                               # This file
 ```
