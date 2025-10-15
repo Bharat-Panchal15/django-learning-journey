@@ -41,12 +41,14 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Permissions and groups
   - Custom user models
 
-- 🔜 **Phase 5: Advanced Django** (Upcoming)
+- ✅ **Phase 5: Advanced Django**
   - Class-based Views (ListView, DetailView, CreateView, UpdateView, DeleteView)
-  - Mixins
   - Pagination
   - Signals
   - Middleware
+
+- 🔜 **Phase 5: Advanced Django** (Upcoming)
+  - Mixins
   - Context processors
   - Custom template tags and filters
 
