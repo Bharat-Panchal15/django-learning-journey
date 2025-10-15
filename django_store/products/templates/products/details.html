@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ product.name }}</h2>
+    <p><strong>Price:</strong>${{ product.price }}</p>
+    <p><strong>Stock:</strong>{{ product.stock }}</p>
+    {% if product.description %}
+        <p>{{ product.description }}</p>
+    {% endif %}
+
+    <a href="{% url 'product-list' %}">Back to products</a>
+{% endblock %}

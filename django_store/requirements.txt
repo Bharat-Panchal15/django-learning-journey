@@ -1,0 +1,9 @@
+asgiref==3.9.1
+cffi==2.0.0
+cryptography==46.0.1
+Django==5.2.6
+pycparser==2.23
+PyMySQL==1.1.2
+PyPDF2==3.0.1
+sqlparse==0.5.3
+tzdata==2025.2
