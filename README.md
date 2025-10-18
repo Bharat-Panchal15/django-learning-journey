@@ -67,6 +67,8 @@ django-learning-journey/
 ├── django_models/                          # Completed
 ├── django_forms/                           # Completed
 ├── django_auth/                            # Completed
+├── django_auth_2/                          # Completed
+├── django_store/                           # Completed
 ├── Django_Learning_Roadmap.pdf             # Detailed learning roadmap
 └── README.md                               # This file
 ```
