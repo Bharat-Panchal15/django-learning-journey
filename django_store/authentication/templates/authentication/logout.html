@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Logout</h2>
+        <p>Are you sure you want to logout?</p>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+            <a href="{% url 'product-list' %}">Cancel</a>
+        </form>
+    </div>
+{% endblock content %}

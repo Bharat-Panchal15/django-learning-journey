@@ -24,5 +24,6 @@ def home_view(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view,name='home'),
+    path('auth/',include('authentication.urls')),
     path('products/',include('products.urls')),
 ]
