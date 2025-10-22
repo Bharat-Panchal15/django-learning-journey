@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <h2>{{ product.name }}</h2>
-    <p><strong>Price:</strong>${{ product.price }}</p>
-    <p><strong>Stock:</strong>{{ product.stock }}</p>
-    {% if product.description %}
-        <p>{{ product.description }}</p>
-    {% endif %}
+{% block title %}{{ product.name }} - Mini Store{% endblock %}
 
-    <a href="{% url 'product-list' %}">Back to products</a>
+{% block content %}
+<section class="product-section">
+    <div class="product-container container">
+        <h2 class="product-title">{{ product.name }}</h2>
+        <p><strong>Price:</strong> ${{ product.price }}</p>
+        <p><strong>Stock:</strong> {{ product.stock }}</p>
+        {% if product.description %}
+            <p>{{ product.description }}</p>
+        {% endif %}
+        <a href="{% url 'product-list' %}" class="btn btn-secondary">Back to products</a>
+    </div>
+</section>
 {% endblock %}

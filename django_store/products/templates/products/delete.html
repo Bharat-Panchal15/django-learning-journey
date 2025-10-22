@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
+{% block title %}Delete Product - Mini Store{% endblock %}
+
 {% block content %}
-    <h2>Delete Product</h2>
-    <p>Are you sure you want to delete "{{ product.name }}"</p>
-
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Yes, Delete</button>
-    </form>
-
-    <a href="{% url 'product-list' %}">Cancel</a>
+<section class="product-section">
+    <div class="product-container container">
+        <h2 class="product-title">Delete Product</h2>
+        <p>Are you sure you want to delete "{{ product.name }}"?</p>
+        <form method="post" class="product-form">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        </form>
+        <a href="{% url 'product-list' %}" class="btn btn-secondary">Cancel</a>
+    </div>
+</section>
 {% endblock %}

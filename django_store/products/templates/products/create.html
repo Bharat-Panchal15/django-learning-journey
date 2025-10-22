@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
+{% block title %}Add Product - Mini Store{% endblock %}
+
 {% block content %}
-    <h2>Add New Product</h2>
-
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add Product</button>
-    </form>
-
-    <a href="{% url 'product-list' %}">Back to products</a>
+<section class="product-section">
+    <div class="product-container container">
+        <h2 class="product-title">Add New Product</h2>
+        <form method="post" class="product-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+        <a href="{% url 'product-list' %}" class="btn btn-secondary">Back to products</a>
+    </div>
+</section>
 {% endblock %}

@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
+{% block title %}Logout - Mini Store{% endblock %}
+
 {% block content %}
-    <div class="container">
-        <h2>Logout</h2>
+<section class="auth-section">
+    <div class="auth-container container">
+        <h2 class="auth-title">Logout</h2>
         <p>Are you sure you want to logout?</p>
-        <form action="{% url 'logout' %}" method="post">
+        <form action="{% url 'logout' %}" method="post" class="auth-form">
             {% csrf_token %}
-            <button type="submit">Logout</button>
-            <a href="{% url 'product-list' %}">Cancel</a>
+            <button type="submit" class="btn btn-primary">Logout</button>
+            <a href="{% url 'product-list' %}" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
-{% endblock content %}
+</section>
+{% endblock %}

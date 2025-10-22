@@ -1,10 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mini Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mini Store{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="{% url 'home' %}" class="logo">Mini Store</a>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}" class="nav-item">Home</a></li>
+                <li><a href="{% url 'register' %}" class="nav-item">Register</a></li>
+                <li><a href="{% url 'login' %}" class="nav-item">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="site-main container">
+        {% block content %}
+        <!-- Child templates will insert their content here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer container">
+        <p>&copy; {% now "Y" %} Mini Store. All rights reserved.</p>
+    </footer>
 </body>
 </html>

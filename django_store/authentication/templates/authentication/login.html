@@ -1,16 +1,22 @@
 {% extends 'base.html' %}
 
+{% block title %}Login - Mini Store{% endblock %}
+
 {% block content %}
-    <div class="container">
-        <h2>Login</h2>
+<section class="auth-section">
+    <div class="auth-container container">
+        <h2 class="auth-title">Login</h2>
         {% if form.errors %}
             <p class="error">{{ form.errors }}</p>
         {% endif %}
-        <form action="{% url 'login' %}" method="post">
+        <form action="{% url 'login' %}" method="post" class="auth-form">
             {% csrf_token %}
-            {{ form.as_p}}
-            <button type="submit">Login</button>
-            <a href="{% url 'register' %}">Don't have an account? Create one</a>
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
+        <p class="auth-link">
+            Don't have an account? <a href="{% url 'register' %}">Create one here</a>.
+        </p>
     </div>
+</section>
 {% endblock %}

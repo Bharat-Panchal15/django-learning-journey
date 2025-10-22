@@ -20,7 +20,7 @@ class ProductDetailView(LoginRequiredMixin, DetailView):
     template_name = "products/details.html"
     context_object_name = "product"
 
-class ProductCreateView(LoginRequiredMixin,StaffRequiredMixin, CreateView):
+class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     template_name = "products/create.html"
     fields = ["name","description","price","stock"]
