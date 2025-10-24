@@ -6,7 +6,7 @@
 <section class="product-section">
     <div class="product-container container">
         <h2 class="product-title">{{ product.name }}</h2>
-        <p><strong>Price:</strong> ${{ product.price }}</p>
+        <p><strong>Price:</strong> ${{ product.price|price_filter }}</p>
         <p><strong>Stock:</strong> {{ product.stock }}</p>
         {% if product.description %}
             <p>{{ product.description }}</p>

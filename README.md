@@ -46,14 +46,21 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Pagination
   - Signals
   - Middleware
-
-- 🔜 **Phase 5: Advanced Django** (Upcoming)
   - Mixins
   - Context processors
   - Custom template tags and filters
 
+- 🔜 **Phase 6: REST APIs with Django REST Framework** (Upcoming)
+  - Installing and setting up DRF
+  - Serializers
+  - ViewSets and Routers
+  - API authentication (Token, JWT)
+  - Permissions in DRF
+  - Filtering and pagination
+  - Nested serializers
+  - Versioning
+
 - ⏳ **Later Phases**
-  - Phase 6: REST APIs with Django REST Framework
   - Phase 7: Deployment and Production
   - Phase 8: Extras for Real-World Projects
 

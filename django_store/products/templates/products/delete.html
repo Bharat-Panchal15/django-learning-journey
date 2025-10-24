@@ -6,7 +6,7 @@
 <section class="product-section">
     <div class="product-container container">
         <h2 class="product-title">Delete Product</h2>
-        <p>Are you sure you want to delete "{{ product.name }}"?</p>
+        <p>Are you sure you want to delete "{{ product.name|title }}"?</p>
         <form method="post" class="product-form">
             {% csrf_token %}
             <button type="submit" class="btn btn-danger">Yes, Delete</button>
