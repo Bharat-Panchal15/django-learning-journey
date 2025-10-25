@@ -50,9 +50,11 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Context processors
   - Custom template tags and filters
 
-- 🔜 **Phase 6: REST APIs with Django REST Framework** (Upcoming)
+- ✅ **Phase 6: REST APIs with Django REST Framework**
   - Installing and setting up DRF
   - Serializers
+
+- 🔜 **Phase 6: REST APIs with Django REST Framework** (Upcoming)
   - ViewSets and Routers
   - API authentication (Token, JWT)
   - Permissions in DRF
@@ -76,6 +78,7 @@ django-learning-journey/
 ├── django_auth/                            # Completed
 ├── django_auth_2/                          # Completed
 ├── django_store/                           # Completed
+├── django_apis/                            # In Progress
 ├── Django_Learning_Roadmap.pdf             # Detailed learning roadmap
 └── README.md                               # This file
 ```
