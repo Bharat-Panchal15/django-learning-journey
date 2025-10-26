@@ -53,9 +53,9 @@ The goal is to internalize Django fundamentals and gradually build production-re
 - ✅ **Phase 6: REST APIs with Django REST Framework**
   - Installing and setting up DRF
   - Serializers
+  - ViewSets and Routers
 
 - 🔜 **Phase 6: REST APIs with Django REST Framework** (Upcoming)
-  - ViewSets and Routers
   - API authentication (Token, JWT)
   - Permissions in DRF
   - Filtering and pagination
