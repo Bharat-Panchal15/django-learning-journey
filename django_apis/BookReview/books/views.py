@@ -1,52 +1,28 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status, viewsets
-from rest_framework.permissions import IsAuthenticated
-from django.shortcuts import get_object_or_404
-from .models import Book
-from .serializers import BookSerializer
+from rest_framework import viewsets, filters
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from django_filters.rest_framework.backends import DjangoFilterBackend
+from .models import Book, Review
+from .permissions import IsOwnerOrReadOnly 
+from .serializers import BookSerializer, ReviewSerializer
 
 # Create your views here.
-
-class BookListAPIView(APIView):
-    def get(self, request):
-        books = Book.objects.all()
-        serializer = BookSerializer(books,many=True)
-        return Response(serializer.data)
-    
-    def post(self, request):
-        serializer = BookSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
-
-class BookDetailAPIView(APIView):
-    def get(self, request, pk):
-        book = get_object_or_404(Book, pk=pk)
-        serializer = BookSerializer(book)
-        return Response(serializer.data)
-    
-    def put(self, request, pk):
-        book = get_object_or_404(Book, pk=pk)
-        serializer = BookSerializer(book,data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
-    
-    def delete(self, request, pk):
-        book = get_object_or_404(Book, pk=pk)
-        book.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
 
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
+    filterset_fields = ['author']
+    ordering_fields = ['published_date']
+    search_fields = ['title','author']
+    
+class ReviewViewSet(viewsets.ModelViewSet):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
+    filterset_fields = ['book','rating','user'] # =?book1 or %rating=5
+    ordering_fields = ['rating','created_at']
+    search_fields = ['comment']
 
-class SecretAPIView(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        user = request.user
-        return Response({ "message": f"Welcome, {user.username}! This is a protect endpoint."})
+    def perform_create(self, serializer):
+        return serializer.save(user=self.request.user)
