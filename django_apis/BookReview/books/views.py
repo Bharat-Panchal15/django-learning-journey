@@ -14,6 +14,11 @@ class BookViewSet(viewsets.ModelViewSet):
     filterset_fields = ['author']
     ordering_fields = ['published_date']
     search_fields = ['title','author']
+
+    def list(self, request, *args, **kwargs):
+        current_version = request.version
+        print(f"API version in use: {current_version}")
+        return super().list(request, *args, **kwargs)
     
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()

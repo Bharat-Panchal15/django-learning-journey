@@ -58,12 +58,18 @@ The goal is to internalize Django fundamentals and gradually build production-re
   - Permissions in DRF
   - Filtering and pagination
   - Nested serializers
-
-- 🔜 **Phase 6: REST APIs with Django REST Framework** (Upcoming)
   - Versioning
 
+- 🔜 **Phase 7: Deployment and Production** (Upcoming)
+  - Settings for production
+  - Environment variables
+  - Static and media files in production
+  - Using Gunicorn/uWSGI
+  - Deploying to Heroku, Railway or VBP (Azure in my case)
+  - Database setup in production (MySQL)
+  - Security best practices
+
 - ⏳ **Later Phases**
-  - Phase 7: Deployment and Production
   - Phase 8: Extras for Real-World Projects
 
 ---
@@ -78,7 +84,7 @@ django-learning-journey/
 ├── django_auth/                            # Completed
 ├── django_auth_2/                          # Completed
 ├── django_store/                           # Completed
-├── django_apis/                            # In Progress
+├── django_apis/                            # Completed
 ├── Django_Learning_Roadmap.pdf             # Detailed learning roadmap
 └── README.md                               # This file
 ```
